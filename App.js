@@ -6,10 +6,13 @@ import MyComponent from "./components/appbar";
 
 const theme = {
   ...DefaultTheme,
+  dark: false,
+  roundness: 2,
   colors: {
     ...DefaultTheme.colors,
-    primary: "tomato",
-    accent: "yellow",
+    primary: "#EEEEEE",
+    accent: "#39464F",
+    background: "#FFFFFF",
   },
 };
 

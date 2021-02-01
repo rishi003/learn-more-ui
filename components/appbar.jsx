@@ -6,10 +6,9 @@ const MORE_ICON = Platform.OS === "ios" ? "dots-horizontal" : "dots-vertical";
 
 const MyComponent = () => (
   <Appbar.Header>
-    <Appbar.BackAction onPress={() => {}} />
-    <Appbar.Content title="Title" />
-    <Appbar.Action icon="magnify" onPress={() => {}} />
-    <Appbar.Action icon={MORE_ICON} onPress={() => {}} />
+    <Appbar.Action icon="menu" onPress={() => {}} />
+    <Appbar.Content title="Dashboard" />
+    <Appbar.Action icon="arrow-decision" onPress={() => {}} />
   </Appbar.Header>
 );
 
