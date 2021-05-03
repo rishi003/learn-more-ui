@@ -1,8 +1,7 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text } from "react-native";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
-import MyComponent from "./components/appbar";
+import App from "./index";
 
 const theme = {
   ...DefaultTheme,
@@ -10,16 +9,16 @@ const theme = {
   roundness: 2,
   colors: {
     ...DefaultTheme.colors,
-    primary: "#EEEEEE",
-    accent: "#39464F",
+    primary: "#6200EE",
+    accent: "#FFFFFF",
     background: "#FFFFFF",
   },
 };
 
-export default function App() {
+export default function Main() {
   return (
     <PaperProvider theme={theme}>
-      <MyComponent></MyComponent>
+      <App />
     </PaperProvider>
   );
 }
