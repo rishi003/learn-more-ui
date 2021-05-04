@@ -3,7 +3,12 @@ import { useState } from "react";
 import { View, Text } from "react-native";
 import { StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { Button, IconButton, Surface } from "react-native-paper";
+import {
+  Button,
+  IconButton,
+  Surface,
+  TouchableRipple,
+} from "react-native-paper";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const Home = ({ navigation }) => {
@@ -19,13 +24,21 @@ const Home = ({ navigation }) => {
         Go to Collections
       </Button>
       <Surface style={style.bottomBar}>
-        <TouchableOpacity>
+        <TouchableRipple
+          rippleColor="rgba(0, 0, 0, .32)"
+          onPress={() => console.log("Pressed")}
+          style={{ paddingVertical: 18, width: "50%", alignItems: "center" }}
+        >
           <Icon name="documents-outline" size={25} color="black" />
-        </TouchableOpacity>
+        </TouchableRipple>
 
-        <TouchableOpacity>
+        <TouchableRipple
+          rippleColor="rgba(0, 0, 0, .32)"
+          onPress={() => console.log("Pressed")}
+          style={{ paddingVertical: 18, width: "50%", alignItems: "center" }}
+        >
           <Icon name="duplicate-outline" size={25} color="black" />
-        </TouchableOpacity>
+        </TouchableRipple>
       </Surface>
     </View>
   );
@@ -40,11 +53,10 @@ const style = StyleSheet.create({
   bottomBar: {
     position: "absolute",
     bottom: 0,
-    paddingVertical: 18,
     width: "100%",
     flex: 1,
     alignItems: "center",
-    justifyContent: "space-around",
+
     flexDirection: "row",
   },
 });
