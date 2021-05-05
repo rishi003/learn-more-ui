@@ -10,10 +10,11 @@ import {
   TouchableRipple,
 } from "react-native-paper";
 import Icon from "react-native-vector-icons/Ionicons";
+import CollectionList from "../components/CollectionList";
 
 const Home = ({ navigation }) => {
   const [defaultCollection, setDefaultCollection] = useState();
-
+  const [visible, setVisible] = useState(false);
   return (
     <View style={style.container}>
       <Text>Home Screen</Text>
@@ -23,10 +24,11 @@ const Home = ({ navigation }) => {
       >
         Go to Collections
       </Button>
+      <CollectionList isVisible={visible} />
       <Surface style={style.bottomBar}>
         <TouchableRipple
           rippleColor="rgba(0, 0, 0, .32)"
-          onPress={() => console.log("Pressed")}
+          onPress={() => setVisible(!visible)}
           style={{ paddingVertical: 18, width: "50%", alignItems: "center" }}
         >
           <Icon name="documents-outline" size={25} color="black" />
